@@ -59,7 +59,7 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="group p-6 rounded-xl bg-card shadow-card hover:shadow-card-hover transition-all duration-300 border border-border"
+              className="group p-6 rounded-xl bg-card shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:-translate-y-1"
             >
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <category.icon className="h-6 w-6 text-white" />

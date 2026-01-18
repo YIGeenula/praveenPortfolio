@@ -128,7 +128,7 @@ interface Project {
 }
 
 const ProjectCard = ({ project }: { project: Project }) => (
-  <div className="group flex flex-col h-full rounded-2xl bg-card shadow-card hover:shadow-card-hover transition-all duration-300 border border-border overflow-hidden">
+  <div className="group flex flex-col h-full rounded-2xl bg-card shadow-card hover:shadow-card-hover transition-all duration-300 border border-border overflow-hidden hover:-translate-y-2">
     {/* Header */}
     <div className="p-6 pb-4">
       <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -231,7 +231,7 @@ const ProjectsSection = () => {
           </TabsList>
 
           <TabsContent value="manual" className="mt-0">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up">
               {manualProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}
@@ -239,7 +239,7 @@ const ProjectsSection = () => {
           </TabsContent>
 
           <TabsContent value="automation" className="mt-0">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-slide-up">
               {automationProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}
@@ -247,7 +247,7 @@ const ProjectsSection = () => {
           </TabsContent>
 
           <TabsContent value="api-performance" className="mt-0">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-slide-up">
               {apiPerformanceProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}
