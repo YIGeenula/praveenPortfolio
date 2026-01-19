@@ -114,6 +114,38 @@ const apiPerformanceProjects = [
     color: "from-emerald-500 to-teal-500",
     demoLink: "https://www.youtube.com/watch?v=CDl9b710Ghk",
   },
+  {
+    icon: BarChart3,
+    title: "JMeter Load Testing Project",
+    description: "In-depth performance testing project focused on simulating concurrent users and analyzing API/Web app performance metrics.",
+    technologies: ["Apache JMeter", "HTTP Protocol", "Load & Performance Testing"],
+    scenarios: [
+      "Test plan & thread group configuration",
+      "Simulate concurrent users",
+      "Execute load tests on web app / API",
+      "Analyze response time, throughput & error rate",
+    ],
+    skills: ["Performance Metrics", "Load Distribution", "Bottleneck Analysis"],
+    color: "from-blue-500 to-cyan-500",
+    demoLink: "http://youtube.com/watch?v=oKITonqxYwU&feature=youtu.be",
+  },
+  {
+    icon: Server,
+    title: "Restful Booker API",
+    description: "Full lifecycle API testing for a booking management system including token-based authentication and CRUD operations.",
+    technologies: ["Postman", "REST API", "JSON", "Authentication"],
+    scenarios: [
+      "Create Token (Authentication)",
+      "Get Booking IDs",
+      "Create Booking (POST)",
+      "Update Booking (PUT / PATCH)",
+      "Delete Booking (DELETE)",
+      "Response validation & status code verification",
+    ],
+    skills: ["API Automation", "Request Chaining", "Status Code Verification"],
+    color: "from-violet-500 to-purple-600",
+    demoLink: "https://www.youtube.com/watch?v=oXPkqC8hXm8",
+  },
 ];
 
 interface Project {
