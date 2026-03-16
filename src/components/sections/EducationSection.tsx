@@ -4,7 +4,7 @@ const education = [
   {
     icon: GraduationCap,
     title: "BSc in Software Engineering",
-    institution: "National Institute of Business Management (NIBM)",
+    institution: "International College of Business and Technology (ICBT)",
     location: "Sri Lanka",
     period: "2024 – 2028",
     type: "education",
