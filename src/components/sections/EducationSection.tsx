@@ -6,7 +6,7 @@ const education = [
     title: "BSc in Software Engineering",
     institution: "International College of Business and Technology (ICBT)",
     location: "Sri Lanka",
-    period: "2024 – 2028",
+    period: "(2026 - 2029)",
     type: "education",
   },
 ];
