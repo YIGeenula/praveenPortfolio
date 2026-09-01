@@ -52,7 +52,7 @@ const HeroSection = () => {
             View Projects
           </Button>
           <Button variant="cta" size="lg" asChild className="hover:scale-105 transition-transform">
-            <a href="/PraveenDharshanaCV.pdf" download="PraveenDharshanaCV.pdf">
+            <a href="/Praveeen%20Dharshana%20new.pdf" download="Praveen_Dharshana_CV.pdf">
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </a>
