@@ -296,7 +296,7 @@ const ProjectsSection = () => {
           <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 sm:grid-cols-4 mb-12">
             <TabsTrigger value="manual">Manual Testing</TabsTrigger>
             <TabsTrigger value="automation">Automation</TabsTrigger>
-            <TabsTrigger value="app-testing">App Testing</TabsTrigger>
+            <TabsTrigger value="app-testing">Mobile App Testing</TabsTrigger>
             <TabsTrigger value="api-performance">API & Performance</TabsTrigger>
           </TabsList>
 

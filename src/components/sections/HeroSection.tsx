@@ -27,7 +27,7 @@ const HeroSection = () => {
 
         {/* Subtitle - Testing Types */}
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 animate-slide-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-          {["Manual Testing", "Automation Testing", "App Testing", "API Testing", "Performance Testing", "AI-Driven QA"].map((skill, index) => (
+          {["Manual Testing", "Automation Testing", "Mobile App Testing", "API Testing", "Performance Testing", "AI-Driven QA"].map((skill, index) => (
             <span
               key={index}
               className="px-4 py-2 text-sm md:text-base font-medium rounded-full bg-card border border-border shadow-sm hover:scale-105 transition-transform duration-200"
