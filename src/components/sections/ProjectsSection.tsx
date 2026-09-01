@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Mail, LogIn, Bug, Search, Server, BarChart3, Play } from "lucide-react";
+import { ExternalLink, Github, Mail, LogIn, Bug, Search, Server, BarChart3, Play, Smartphone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -80,6 +80,43 @@ const automationProjects = [
     skills: ["Page Object Model", "Data-Driven Testing", "Reporting"],
     color: "from-blue-500 to-blue-600",
     demoLink: "https://www.youtube.com/watch?v=tA16d5nAOrE",
+  },
+];
+
+const appTestingProjects = [
+  {
+    icon: Smartphone,
+    title: "Mobile App Testing with Appium – YouTube",
+    description: "Mobile application testing on the YouTube app using a real Android device, Appium, and Appium Inspector.",
+    technologies: ["Appium", "Appium Inspector", "Real Android Device", "ADB", "CMD"],
+    scenarios: [
+      "Connect real Android device via USB & ADB",
+      "Configure Appium Inspector capabilities",
+      "Launch YouTube mobile application",
+      "Inspect UI elements & identify locators",
+      "Extract attributes (ID, XPath, text, content-desc)",
+      "Verify device info using CMD/ADB commands",
+    ],
+    skills: ["Mobile App Testing", "Appium Inspector", "Locator Strategies", "ADB Commands"],
+    color: "from-red-500 to-pink-600",
+    demoLink: "https://youtu.be/CjUsYUHJs4U",
+  },
+  {
+    icon: MapPin,
+    title: "Mobile App Testing with Appium – Google Maps",
+    description: "Mobile application testing of the Google Maps app using a real Android device, Appium, Appium Inspector, and CMD/ADB.",
+    technologies: ["Appium", "Appium Inspector", "Real Android Device", "ADB", "CMD"],
+    scenarios: [
+      "Connect real Android device via USB & ADB",
+      "Configure Appium Inspector capabilities",
+      "Launch Google Maps mobile application",
+      "Inspect Google Maps UI elements",
+      "Find elements using ID, XPath, text, & content-desc",
+      "Inspect device information with CMD/ADB",
+    ],
+    skills: ["Mobile Test Automation", "Appium", "UI Inspection", "Real Device Testing"],
+    color: "from-emerald-500 to-teal-600",
+    demoLink: "https://youtu.be/oWp8Yw4qs1M",
   },
 ];
 
@@ -250,15 +287,16 @@ const ProjectsSection = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hands-on projects demonstrating my skills in manual testing, automation, API testing, and performance testing.
+            Hands-on projects demonstrating my skills in manual testing, automation, app testing, API testing, and performance testing.
           </p>
         </div>
 
         {/* Project Tabs */}
         <Tabs defaultValue="manual" className="w-full">
-          <TabsList className="grid w-full max-w-lg mx-auto grid-cols-3 mb-12">
+          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 sm:grid-cols-4 mb-12">
             <TabsTrigger value="manual">Manual Testing</TabsTrigger>
             <TabsTrigger value="automation">Automation</TabsTrigger>
+            <TabsTrigger value="app-testing">App Testing</TabsTrigger>
             <TabsTrigger value="api-performance">API & Performance</TabsTrigger>
           </TabsList>
 
@@ -278,6 +316,14 @@ const ProjectsSection = () => {
             </div>
           </TabsContent>
 
+          <TabsContent value="app-testing" className="mt-0">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-slide-up">
+              {appTestingProjects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </TabsContent>
+
           <TabsContent value="api-performance" className="mt-0">
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-slide-up">
               {apiPerformanceProjects.map((project, index) => (
@@ -292,3 +338,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
