@@ -21,7 +21,7 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight animate-fade-in">
           Software Engineering Undergraduate
           <span className="block text-gradient mt-2">
-            Aspiring Software Quality Assurance Engineer
+            Aspiring AI Automation Engineer
           </span>
         </h1>
 
