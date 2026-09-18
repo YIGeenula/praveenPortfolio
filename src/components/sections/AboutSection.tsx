@@ -54,7 +54,7 @@ const AboutSection = () => {
               and continuously improving my skills through hands-on projects and modern testing practices.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am dedicated to expanding my expertise in <span className="text-primary font-semibold">Software Quality Assurance (SQA)</span>, applying my testing knowledge to real-world scenarios, and contributing to software excellence with commitment and enthusiasm.
+              I am dedicated to expanding my expertise in <span className="text-primary font-semibold">AI Automatio</span>, applying my testing knowledge to real-world scenarios, and contributing to software excellence with commitment and enthusiasm.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               I have hands-on experience in <span className="text-foreground font-medium">test documentation,
