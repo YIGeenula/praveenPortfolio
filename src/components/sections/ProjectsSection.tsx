@@ -1,6 +1,42 @@
-import { ExternalLink, Github, Mail, LogIn, Bug, Search, Server, BarChart3, Play, Smartphone, MapPin } from "lucide-react";
+import { ExternalLink, Github, Mail, LogIn, Bug, Search, Server, BarChart3, Play, Smartphone, MapPin, Sparkles, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+const promptEngineeringProjects = [
+  {
+    icon: Sparkles,
+    title: "AI Test Case Generator for Web Applications",
+    description: "Developed an AI-powered test case generation solution for web application testing using Prompt Engineering techniques including Role Prompting, Persona, Delimiters, Constraints, and the Co-STAR framework. Generated and evaluated positive, negative, edge, and boundary test scenarios for web application features, validating AI outputs for requirement coverage, duplicate scenarios, incorrect assumptions, and potential hallucinations.",
+    technologies: ["Prompt Engineering", "Co-STAR Framework", "Role Prompting", "Web Testing", "AI Test Generation"],
+    scenarios: [
+      "Role Prompting, Persona & Delimiters setup",
+      "Co-STAR framework prompt design",
+      "Positive, negative, edge & boundary scenario generation",
+      "AI output validation for requirement coverage",
+      "Hallucination & duplicate scenario detection",
+    ],
+    skills: ["Prompt Engineering", "Co-STAR Framework", "Test Scenario Design", "AI Output Validation"],
+    color: "from-purple-600 to-indigo-600",
+    demoLink: "https://youtu.be/4oNMjdnGbpI",
+  },
+  {
+    icon: Bot,
+    title: "AI Bug Prediction — Shift-Left Testing for Mobile Application",
+    description: "Developed an AI-driven Shift-Left Testing project for a mobile application using Prompt Engineering techniques including Role Prompting, Persona, Delimiters, Constraints, and the Co-STAR framework. Generated mobile test data, analyzed requirements, identified potential defects and high-risk scenarios, and designed preventive test cases. Validated AI-generated predictions through manual and Appium-based mobile testing and compared predicted risks with actual test results.",
+    technologies: ["Prompt Engineering", "Shift-Left Testing", "Co-STAR Framework", "Mobile Testing", "Appium"],
+    scenarios: [
+      "Role Prompting, Delimiters & Constraints engineering",
+      "Mobile test data generation & requirements analysis",
+      "Defect identification & high-risk scenario prediction",
+      "Preventive test case design",
+      "Validation via manual & Appium mobile testing",
+      "Risk comparison with actual test results",
+    ],
+    skills: ["Shift-Left Testing", "Prompt Engineering", "Defect Prediction", "Appium Testing", "Risk Analysis"],
+    color: "from-cyan-500 to-blue-600",
+    demoLink: "https://youtu.be/i2nlerTB_xs",
+  },
+];
 
 const manualProjects = [
   {
@@ -287,18 +323,27 @@ const ProjectsSection = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hands-on projects demonstrating my skills in manual testing, automation, app testing, API testing, and performance testing.
+            Hands-on projects demonstrating my skills in Prompt Engineering, manual testing, automation, app testing, and API & performance testing.
           </p>
         </div>
 
         {/* Project Tabs */}
-        <Tabs defaultValue="manual" className="w-full">
-          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-2 sm:grid-cols-4 mb-12">
+        <Tabs defaultValue="prompt-engineering" className="w-full">
+          <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-2 sm:grid-cols-5 mb-12">
+            <TabsTrigger value="prompt-engineering">Prompt Engineering</TabsTrigger>
             <TabsTrigger value="manual">Manual Testing</TabsTrigger>
             <TabsTrigger value="automation">Automation</TabsTrigger>
             <TabsTrigger value="app-testing">Mobile App Testing</TabsTrigger>
             <TabsTrigger value="api-performance">API & Performance</TabsTrigger>
           </TabsList>
+
+          <TabsContent value="prompt-engineering" className="mt-0">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-slide-up">
+              {promptEngineeringProjects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </TabsContent>
 
           <TabsContent value="manual" className="mt-0">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up">
